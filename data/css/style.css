@@ -1,0 +1,10 @@
+.launcher-list-item {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 0px;
+  border-radius: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}

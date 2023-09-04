@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.vysp3r.ProtonPlus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.vysp3r.ProtonPlus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-26 13:47-0400\n"
+"PO-Revision-Date: 2023-07-31 21:42+0200\n"
+"Last-Translator: Christian Lauinger <christian@lauinger-clan.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: src/launcher/launcher-warning-box.vala:21
+msgid "Welcome to "
+msgstr "Willkommen zu "
+
+#: src/launcher/launcher-warning-box.vala:22
+msgid "Install Steam, Lutris, Bottles or Heroic Games Launcher to get started."
+msgstr ""
+"Installieren Sie Steam, Lutris, Bottles oder Heroic Games Launcher, um "
+"loszulegen."
+
+#.
+#: src/launcher/launcher-info-box.vala:36
+#, fuzzy
+msgid "Installed only"
+msgstr "Installieren"
+
+#: src/launcher/launcher-info-box.vala:191
+#: src/launcher/launcher-info-box.vala:200
+msgid "Load more"
+msgstr "Mehr laden"
+
+#: src/launcher/launcher-info-box.vala:215
+msgid "There was an error while fetching data from the GitHub API"
+msgstr "Beim Abrufen von Daten von der GitHub-API ist ein Fehler aufgetreten"
+
+#: src/launcher/launcher-info-box.vala:231
+msgid "Are you sure you want to delete "
+msgstr "Sind Sie sicher das Sie es löschen wollen "
+
+#: src/launcher/launcher-info-box.vala:233
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: src/launcher/launcher-info-box.vala:270
+msgid "Cancel the installation"
+msgstr "Breche Installation ab"
+
+#: src/launcher/launcher-info-box.vala:343
+msgid "Delete the runner"
+msgstr "Löschen des Ausführungswerkzeugs"
+
+#: src/launcher/launcher-info-box.vala:356
+msgid "Install the runner"
+msgstr "Installieren des Ausführungswerkzeugs"
+
+#.
+#: src/launcher/launcher-list-box.vala:26
+msgid "About"
+msgstr "Über"
+
+#: src/shared/launchers/bottles.vala:6 src/shared/launchers/steam.vala:6
+msgid "Runners"
+msgstr "Ausführungswerkzeuge"
+
+#: src/shared/launchers/bottles.vala:11 src/shared/launchers/hgl.vala:15
+#: src/shared/launchers/lutris.vala:11
+#, fuzzy
+msgid "Vulkan based implementation of Direct3D 9, 10 and 11 for Linux/Wine"
+msgstr ""
+"Vulkan basierte Implementierung von DirectX9, 10 und 11 for Linux/Wine. "
+"https://github.com/lutris/docs/blob/master/HowToDXVK.md"
+
+#: src/shared/launchers/bottles.vala:50 src/shared/launchers/hgl.vala:86
+msgid "Contains improvements over Valve's default Proton."
+msgstr ""
+
+#: src/shared/launchers/bottles.vala:54
+#, fuzzy
+msgid ""
+" Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
+msgstr ""
+"Kompatibilitätswerkzeug \"WIne\" um Windowsspiele unter Linux zu starten. "
+"Basierend auf dem neuesten Stand von Valve Proton Experimental Wine, gebaut "
+"für Lutris. Benutzen Sie dies wenn Sie nicht sicher sind."
+
+#: src/shared/launchers/bottles.vala:58 src/shared/launchers/lutris.vala:58
+#, fuzzy
+msgid ""
+"Improved by Lutris to offer better compatibility or performance in certain "
+"games."
+msgstr ""
+"Kompatibilitätswerkzeug \"WIne\" um Windowsspiele unter Linux zu starten. "
+"Verbessert von Lutris um bessere Kompatibilität oder Leistung in einigen "
+"Spielen zu bieten."
+
+#: src/shared/launchers/hgl.vala:7
+#, fuzzy
+msgid "Steam compatibility tool for running Windows games"
+msgstr ""
+"Steam Play Kompatibilitätswerkzeug um DOS-Spiele mit der nativen Linux "
+"DOSBox zu starten."
+
+#: src/shared/launchers/hgl.vala:11
+msgid "Wine is a program which allows running Microsoft Windows programs"
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:19 src/shared/launchers/lutris.vala:15
+msgid ""
+"Fork of Wine's VKD3D which aims to implement the full Direct3D 12 API on top "
+"of Vulkan"
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:62 src/shared/launchers/lutris.vala:54
+msgid ""
+"Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:66 src/shared/launchers/lutris.vala:61
+msgid "Wine build compiled from the official WineHQ sources."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:69 src/shared/launchers/lutris.vala:64
+msgid "Wine build with the Staging patchset applied."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:72 src/shared/launchers/lutris.vala:67
+msgid ""
+"Wine build with the Staging patchset applied and with many additional useful "
+"patches."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:90 src/shared/launchers/steam.vala:67
+msgid ""
+"Custom Proton build for running Windows games, built with the Wine-tkg build "
+"system."
+msgstr ""
+"Benutzerdefiniertes Proton build um Windowsspiele unter Linux zu starten, "
+"gebaut mit dem WIne-tkg Build-System."
+
+#: src/shared/launchers/lutris.vala:7
+msgid "Program which allows running Microsoft Windows programs"
+msgstr ""
+
+#: src/shared/launchers/lutris.vala:87
+msgid "Contains RTX fix for Star Citizen."
+msgstr ""
+
+#: src/shared/launchers/steam.vala:63
+#, fuzzy
+msgid ""
+"Steam compatibility tool for running Windows games with improvements over "
+"Valve's default Proton."
+msgstr ""
+"Steam Kompatibilitätswerkzeug um Windowsspiele zu Starten mit Verbesserungen "
+"gegenüber Valves Standard-Proton. Benutzen Sie dies wenn Sie nicht sicher "
+"sind."
+
+#: src/shared/launchers/steam.vala:71
+msgid ""
+"Luxtorpeda provides Linux-native game engines for specific Windows-only "
+"games."
+msgstr ""
+"Luxtorpeda bietet Linux-native Spiele-Engines für spezifische Windows-Spiele."
+
+#: src/shared/launchers/steam.vala:72
+msgid ""
+"Steam Play compatibility tool to run DOS games using native Linux DOSBox."
+msgstr ""
+"Steam Play Kompatibilitätswerkzeug um DOS-Spiele mit der nativen Linux "
+"DOSBox zu starten."
+
+#: src/shared/launchers/steam.vala:73
+msgid ""
+"Steam Play compatibility tool to run adventure games using native Linux "
+"ScummVM."
+msgstr ""
+"Steam Play Kompatibilitätswerkzeug um Abenteuer-Spiele mit der nativen Linux "
+"ScummVM zu starten."
+
+#: src/shared/launchers/steam.vala:74
+msgid "Custom Proton build for running the Northstar client for Titanfall 2."
+msgstr ""
+"Benutzerdefiniertes Proton build um den Northstar-Klient für Titenfall 2 zu "
+"starten."
+
+#~ msgid ""
+#~ "Vulkan based implementation of Direct3D 9, 10 and 11 for Linux/Wine with "
+#~ "async patch by Sporif.Warning: Use only with singleplayer games!"
+#~ msgstr ""
+#~ "Vulkan basierte Implementierung von DirectX9, 10 und 11 for Linux/Wine "
+#~ "mit asnychronem Patch by Sporif. Warnung: Nur für Einzelspieler-Spiele "
+#~ "verwenden!"
+
+#~ msgid ""
+#~ "Compatibility tool \"Wine\" to run Windows games on Linux. Official "
+#~ "version from the WineHQ sources, compiled by Kron4ek."
+#~ msgstr ""
+#~ "Kompatibilitätswerkzeug \"WIne\" um Windowsspiele unter Linux zu starten. "
+#~ "Offizielle Version aus den WineHQ -Quellen, kompiliert von Kron4ek."
+
+#~ msgid ""
+#~ "Vulkan based implementation of Direct3D 9, 10 and 11 for Linux/Wine with "
+#~ "async patch and RTX fix for Star Citizen by gnusenpai.Warning: Use only "
+#~ "with singleplayer games!"
+#~ msgstr ""
+#~ "Vulkan basierte Implementierung von DirectX9, 10 und 11 for Linux/Wine "
+#~ "mit asnychronem Patch und RTX Behebung für Star Citizen von gnusenpai. "
+#~ "Warnung: Nur für Einzelspieler-Spiele verwenden!"
+
+#~ msgid "Preferences"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Main"
+#~ msgstr "Allgemein"
+
+#~ msgid "Deleted "
+#~ msgstr "Gelöscht "
+
+#~ msgid "Undo"
+#~ msgstr "Rückgängig"
+
+#, fuzzy
+#~ msgid "A simple Wine and Proton-based compatibility tools manager for GNOME"
+#~ msgstr ""
+#~ "Ein einfacher Wine und Proton-basierter Kompatibilitätswerkzeugmanager "
+#~ "für GNOME"
+
+#~ msgid "Special thanks to"
+#~ msgstr "Spezieller Dank an"
+
+#~ msgid "You cannot close the window while a tool is installing"
+#~ msgstr ""
+#~ "Sie können das Fenster nicht schliessen während ein Werkzeug installiert "
+#~ "wird"
+
+#~ msgid "Telegram"
+#~ msgstr "Telegramm"
+
+#~ msgid "Documentation"
+#~ msgstr "Dokumentation"
+
+#~ msgid "Donation"
+#~ msgstr "Spende"
+
+#~ msgid "Quit"
+#~ msgstr "Beenden"
+
+#~ msgid "Tools"
+#~ msgstr "Werkzeuge"
+
+#~ msgid "Games"
+#~ msgstr "Spiele"
+
+#~ msgid "Notifications"
+#~ msgstr "Benachrichtigungen"
+
+#~ msgid "Launchers"
+#~ msgstr "Starter"
+
+#~ msgid "Select a launcher to proceed"
+#~ msgstr "Wählen Sie einen Starter um fortzufahren"
+
+#~ msgid "Select a tool to proceed"
+#~ msgstr "Wählen Sie ein Werkzeug um fortzufahren"
+
+#~ msgid "Copy"
+#~ msgstr "Kopieren"
+
+#~ msgid "Website"
+#~ msgstr "Webseite"
+
+#~ msgid "Directory: "
+#~ msgstr "Verzeichnis: "
+
+#~ msgid "Size: "
+#~ msgstr "Grösse: "
+
+#~ msgid "Download size (Compressed): "
+#~ msgstr "Downloadgrösse (komprimiert): "
+
+#~ msgid "Release date: "
+#~ msgstr "Veröffentlichungsdatum: "
+
+#~ msgid "Cancel"
+#~ msgstr "Abbrechen"
+
+#~ msgid "Go back"
+#~ msgstr "Zurück gehen"
+
+#~ msgid "You cannot cancel the operation for tools using Github Actions."
+#~ msgstr ""
+#~ "Sie können die Operation für Werkzeuge die Github-Aktionen verwenden "
+#~ "nicht abbrechen."
+
+#~ msgid "Download started...\n"
+#~ msgstr "Download gestartet...\n"
+
+#~ msgid "Download done...\n"
+#~ msgstr "Download fertig...\n"
+
+#~ msgid "Extraction started...\n"
+#~ msgstr "Entpacken gestartet...\n"
+
+#~ msgid "You cannot cancel the operation while it's extracting."
+#~ msgstr "Sie können die Operation nicht abbrechen während entpackt wird."
+
+#~ msgid "Extraction done...\n"
+#~ msgstr "Entpacken fertig...\n"
+
+#~ msgid "This page is a work in progress."
+#~ msgstr "Die Seite ist in Arbeit."
+
+#~ msgid "Style"
+#~ msgstr "Stil"
+
+#~ msgid "There is nothing to see here."
+#~ msgstr "Es gibt nichts zu sehen hier."
+
+#~ msgid "Github API Request Error"
+#~ msgstr "Github API Anfrage-Fehler"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here's a list of the possible reasons why that error happened:\n"
+#~ "- You may have reached the GitHub API limit\n"
+#~ "- You may be disconnected from the internet\n"
+#~ "\n"
+#~ "Why can I still see data then?\n"
+#~ "ProtonPlus caches the json of each requests in case that problem happens"
+#~ msgstr ""
+#~ "Hier ist eine Liste von möglichen Ursachen warum der Fehler passiert ist\n"
+#~ "- Sie könnten das Gitgub API Limit erreicht haben\n"
+#~ "- Sie könnten vom Internet getrennt sein"
+
+#~ msgid ""
+#~ "Make sure to restart Steam if it's open to be able to use it otherwise "
+#~ "you will not see it.\n"
+#~ msgstr ""
+#~ "Stellen Sie sicher das Steam neu gestartet wurde wenn es geöffnet ist um "
+#~ "es benutzen zu können oder Sie werden es nicht sehen können.\n"
+
+#~ msgid ""
+#~ "If you're using gamescope with Steam (Flatpak), those tools will not "
+#~ "work. Make sure to use the community builds from Flathub."
+#~ msgstr ""
+#~ "Wenn Sie gamescope mit Steam (Faltpak) verwenden, werden diese Werkzeuge "
+#~ "nicht funktionieren. Stellen Sie sicher das Sie die Community builds von "
+#~ "Flathub verwenden."
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Light"
+#~ msgstr "Hell"
+
+#~ msgid "Dark"
+#~ msgstr "Dunkel"

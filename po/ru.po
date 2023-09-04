@@ -1,0 +1,301 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-26 13:47-0400\n"
+"Language: ru_RU\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/launcher/launcher-warning-box.vala:21
+msgid "Welcome to "
+msgstr ""
+
+#: src/launcher/launcher-warning-box.vala:22
+msgid "Install Steam, Lutris, Bottles or Heroic Games Launcher to get started."
+msgstr ""
+
+#.
+#: src/launcher/launcher-info-box.vala:36
+#, fuzzy
+msgid "Installed only"
+msgstr "Установить"
+
+#: src/launcher/launcher-info-box.vala:191
+#: src/launcher/launcher-info-box.vala:200
+msgid "Load more"
+msgstr ""
+
+#: src/launcher/launcher-info-box.vala:215
+msgid "There was an error while fetching data from the GitHub API"
+msgstr ""
+
+#: src/launcher/launcher-info-box.vala:231
+#, fuzzy
+msgid "Are you sure you want to delete "
+msgstr "Вы уверены, что хотите удалить выбранный инструмент?"
+
+#: src/launcher/launcher-info-box.vala:233
+msgid "Confirm"
+msgstr ""
+
+#: src/launcher/launcher-info-box.vala:270
+#, fuzzy
+msgid "Cancel the installation"
+msgstr "Описание лаунчера"
+
+#: src/launcher/launcher-info-box.vala:343
+#, fuzzy
+msgid "Delete the runner"
+msgstr "Удалить инструмент"
+
+#: src/launcher/launcher-info-box.vala:356
+#, fuzzy
+msgid "Install the runner"
+msgstr "Установить инструмент"
+
+#.
+#: src/launcher/launcher-list-box.vala:26
+msgid "About"
+msgstr "Об авторе"
+
+#: src/shared/launchers/bottles.vala:6 src/shared/launchers/steam.vala:6
+msgid "Runners"
+msgstr ""
+
+#: src/shared/launchers/bottles.vala:11 src/shared/launchers/hgl.vala:15
+#: src/shared/launchers/lutris.vala:11
+msgid "Vulkan based implementation of Direct3D 9, 10 and 11 for Linux/Wine"
+msgstr ""
+
+#: src/shared/launchers/bottles.vala:50 src/shared/launchers/hgl.vala:86
+msgid "Contains improvements over Valve's default Proton."
+msgstr ""
+
+#: src/shared/launchers/bottles.vala:54
+msgid ""
+" Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
+msgstr ""
+
+#: src/shared/launchers/bottles.vala:58 src/shared/launchers/lutris.vala:58
+msgid ""
+"Improved by Lutris to offer better compatibility or performance in certain "
+"games."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:7
+msgid "Steam compatibility tool for running Windows games"
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:11
+msgid "Wine is a program which allows running Microsoft Windows programs"
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:19 src/shared/launchers/lutris.vala:15
+msgid ""
+"Fork of Wine's VKD3D which aims to implement the full Direct3D 12 API on top "
+"of Vulkan"
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:62 src/shared/launchers/lutris.vala:54
+msgid ""
+"Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:66 src/shared/launchers/lutris.vala:61
+msgid "Wine build compiled from the official WineHQ sources."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:69 src/shared/launchers/lutris.vala:64
+msgid "Wine build with the Staging patchset applied."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:72 src/shared/launchers/lutris.vala:67
+msgid ""
+"Wine build with the Staging patchset applied and with many additional useful "
+"patches."
+msgstr ""
+
+#: src/shared/launchers/hgl.vala:90 src/shared/launchers/steam.vala:67
+msgid ""
+"Custom Proton build for running Windows games, built with the Wine-tkg build "
+"system."
+msgstr ""
+
+#: src/shared/launchers/lutris.vala:7
+msgid "Program which allows running Microsoft Windows programs"
+msgstr ""
+
+#: src/shared/launchers/lutris.vala:87
+msgid "Contains RTX fix for Star Citizen."
+msgstr ""
+
+#: src/shared/launchers/steam.vala:63
+msgid ""
+"Steam compatibility tool for running Windows games with improvements over "
+"Valve's default Proton."
+msgstr ""
+
+#: src/shared/launchers/steam.vala:71
+msgid ""
+"Luxtorpeda provides Linux-native game engines for specific Windows-only "
+"games."
+msgstr ""
+
+#: src/shared/launchers/steam.vala:72
+msgid ""
+"Steam Play compatibility tool to run DOS games using native Linux DOSBox."
+msgstr ""
+
+#: src/shared/launchers/steam.vala:73
+msgid ""
+"Steam Play compatibility tool to run adventure games using native Linux "
+"ScummVM."
+msgstr ""
+
+#: src/shared/launchers/steam.vala:74
+msgid "Custom Proton build for running the Northstar client for Titanfall 2."
+msgstr ""
+
+#~ msgid "Preferences"
+#~ msgstr "Настройки"
+
+#~ msgid "Main"
+#~ msgstr "Главная"
+
+#, fuzzy
+#~ msgid "Deleted "
+#~ msgstr "Удалить инструмент"
+
+#~ msgid "Telegram"
+#~ msgstr "Telegram"
+
+#~ msgid "Documentation"
+#~ msgstr "Документация"
+
+#~ msgid "Donation"
+#~ msgstr "Пожертвование"
+
+#~ msgid "Quit"
+#~ msgstr "Выход"
+
+#~ msgid "Tools"
+#~ msgstr "Инструменты"
+
+#~ msgid "Games"
+#~ msgstr "Игры"
+
+#~ msgid "Notifications"
+#~ msgstr "Уведомления"
+
+#, fuzzy
+#~ msgid "Launchers"
+#~ msgstr "Лаунчер"
+
+#~ msgid "Copy"
+#~ msgstr "Копировать"
+
+#~ msgid "Directory: "
+#~ msgstr "Расположение: "
+
+#, fuzzy
+#~ msgid "Cancel"
+#~ msgstr "Отменено!"
+
+#, fuzzy
+#~ msgid "Download started...\n"
+#~ msgstr "Скачивается..."
+
+#, fuzzy
+#~ msgid "Download done...\n"
+#~ msgstr "Скачивается..."
+
+#, fuzzy
+#~ msgid "Extraction started...\n"
+#~ msgstr "Распаковывается..."
+
+#, fuzzy
+#~ msgid "Extraction done...\n"
+#~ msgstr "Распаковывается..."
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "Темы"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you're using gamescope with Steam (Flatpak), those tools will not "
+#~ "work. Make sure to use the community builds from Flathub."
+#~ msgstr ""
+#~ "Если вы используете gamescope в Steam (Flatpak), эти инструменты не будут "
+#~ "работать. Необходимо использовать совеместимый билд от сообщества. Чтобы "
+#~ "отключить это предупреждение нажмите 'да'. Или выберите 'нет', чтобы "
+#~ "сохранить его."
+
+#~ msgid "System"
+#~ msgstr "Системная"
+
+#~ msgid "Light"
+#~ msgstr "Светлая"
+
+#~ msgid "Dark"
+#~ msgstr "Темная"
+
+#~ msgid "Name: "
+#~ msgstr "Название: "
+
+#~ msgid "Compatibility Tool"
+#~ msgstr "Инструмент совместимости"
+
+#~ msgid "Version"
+#~ msgstr "Версия"
+
+#~ msgid "Info"
+#~ msgstr "Информация"
+
+#~ msgid "Open a browser to the tool page"
+#~ msgstr "Открыть страницу инструмента в браузере"
+
+#~ msgid "Install the selected tool"
+#~ msgstr "Установить выбранный инструмент"
+
+#~ msgid "Done!"
+#~ msgstr "Готово!"
+
+#~ msgid ""
+#~ "There was an error while fetching data from the GitHub API. You may have "
+#~ "reached the maximum amount of requests per hour or may not be connected "
+#~ "to the internet. If you think this is a bug, please report this to us."
+#~ msgstr ""
+#~ "Произошла ошибка при извлечении данных из GitHub API. Возможно, вы "
+#~ "достигли максимального количества запросов в час или, возможно, не "
+#~ "подключены к Интернету. Если вы считаете, что это ошибка, пожалуйста, "
+#~ "сообщите нам об этом."
+
+#~ msgid "Launcher Settings"
+#~ msgstr "Настройки лаунчера"
+
+#~ msgid "Clean launcher"
+#~ msgstr "Очистить лаунчер"
+
+#~ msgid "Delete every installed tools from the launcher"
+#~ msgstr "Очистить лаунчер от всех установленных инструментов"
+
+#~ msgid ""
+#~ "Are you sure you want to clean this launcher? WARNING: It will delete "
+#~ "every installed tools from the launcher!"
+#~ msgstr ""
+#~ "Вы уверены, что хотите очистить этот лаунчер? ВНИМАНИЕ: Это удалит все "
+#~ "установленные для этого лаунчера инструменты!"
+
+#, fuzzy
+#~ msgid "Remember last launcher"
+#~ msgstr "Очистить лаунчер"
+
+#~ msgid "Show gamescope warning"
+#~ msgstr "Показать предупреждение gamescope"
+
+#~ msgid "Launcher settings"
+#~ msgstr "Настройки лаунчера"
+
+#~ msgid "Show information"
+#~ msgstr "Показать информацию"

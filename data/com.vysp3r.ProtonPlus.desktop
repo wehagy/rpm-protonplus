@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ProtonPlus
+Exec=com.vysp3r.ProtonPlus
+Icon=com.vysp3r.ProtonPlus
+Terminal=false
+Type=Application
+Categories=Game;
+StartupNotify=true
