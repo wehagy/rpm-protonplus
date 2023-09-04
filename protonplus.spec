@@ -24,6 +24,7 @@ ExclusiveArch:  x86_64
 License:        GPLv3+
 URL:            %{git_repo}
 Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
+Source1:        %{name}.rpmlintrc
 
 
 
