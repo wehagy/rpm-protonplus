@@ -23,7 +23,7 @@ Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 ExclusiveArch:  x86_64
 License:        GPLv3+
 URL:            %{git_repo}
-Source:         %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
+Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
 
 
 
@@ -59,7 +59,7 @@ Requires:       glib-networking
 Supports Steam, Lutris, Heroic and Bottles.
 
 %prep
-echo "%SHA256SUM0 %{_sourcedir}/%{repo}-%{version}.tar.gz" | sha256sum -c -
+echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
 %autosetup -n %{repo}-%{version}
 
 %build
