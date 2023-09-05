@@ -83,6 +83,9 @@ echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
 
 %find_lang %{flatpak_name}
 
+# create symlink prontonplus -> com.vysp3r.ProtonPlus
+%{__ln_s} %{_bindir}/%{flatpak_name} %{buildroot}%{_bindir}/%{name}
+
 # create symlinks for icons
 # fix rpmlint W: files-duplicate
 %fdupes -s %{buildroot}%{_datadir}/icons/hicolor
@@ -99,6 +102,8 @@ appstream-util validate-relax --nonet \
 %files -f %{flatpak_name}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
+# install symlink prontonplus -> com.vysp3r.ProtonPlus
+%{_bindir}/%{name}
 %{_bindir}/%{flatpak_name}
 %{_datadir}/appdata/%{flatpak_name}.appdata.xml
 %{_datadir}/applications/%{flatpak_name}.desktop
@@ -108,22 +113,11 @@ appstream-util validate-relax --nonet \
 
 
 
-%post
-case "$1" in
-  1) # Post install RPM, create symlink prontonplus -> com.vysp3r.ProtonPlus
-    %{__ln_s} -f %{_bindir}/com.%{project}.%{repo} %{_bindir}/%{name}
-  ;;
-esac
-
-%postun
-case "$1" in
-  0) # Post remove RPM, remove symlink protonplus -> com.vysp3r.ProtonPlus
-    %{__rm} %{_bindir}/%{name}
-  ;;
-esac
-
 %changelog
 * Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- fix: W: dangerous-command-in-%postun rm
+- fix: W: dangerous-command-in-%post ln
+- fix: general improvements
 - fix: E: standard-dir-owned-by-package
 - fix: W: file-not-in-%lang
 - fix: W: no-manual-page-for-binary 
