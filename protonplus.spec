@@ -8,6 +8,9 @@
 %global built_tag_strip %(b=%{built_tag}; echo ${b:1})
 %global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"~"})
 
+# com.vysp3r.ProtonPlus
+%global flatpak_name    %{provider_tld}.%{project}.%{repo}
+
 # https://github.com/vysp3r/ProtonPlus
 %global provider_prefix %{provider}.%{provider_tld}/%{project}/%{repo}
 %global import_path     %{provider_prefix}
@@ -59,28 +62,46 @@ Requires:       glib-networking
 
 Supports Steam, Lutris, Heroic and Bottles.
 
+
+
 %prep
 echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
 %autosetup -n %{repo}-%{version}
+
+
 
 %build
 %meson
 %meson_build
 
+
+
 %install
 %meson_install
 
+%find_lang %{flatpak_name}
+
+
+
 %check
-desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
 
 appstream-util validate-relax --nonet \
-    %{buildroot}%{_datadir}/appdata/*.appdata.xml
+    %{buildroot}%{_datadir}/appdata/%{flatpak_name}.appdata.xml
 
-%files
+
+
+%files -f %{flatpak_name}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
-%{_bindir}/*
-%{_datadir}/*
+%{_bindir}/%{flatpak_name}
+%{_datadir}/appdata/%{flatpak_name}.appdata.xml
+%{_datadir}/applications/%{flatpak_name}.desktop
+%{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
+%{_datadir}/icons/hicolor/scalable/apps/%{flatpak_name}.svg
+%{_datadir}/icons/hicolor/symbolic/apps/%{flatpak_name}-symbolic.svg
+
+
 
 %post
 case "$1" in
