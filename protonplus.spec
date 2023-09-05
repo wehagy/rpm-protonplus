@@ -20,7 +20,7 @@
 
 Name:           protonplus
 Version:        %{gen_version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 
 ExclusiveArch:  x86_64
@@ -123,5 +123,14 @@ case "$1" in
 esac
 
 %changelog
+* Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- fix: E: standard-dir-owned-by-package
+- fix: W: file-not-in-%lang
+- fix: W: no-manual-page-for-binary 
+- fix: W: files-duplicate
+
+* Mon Sep 04 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- fix: use-of-RPM_SOURCE_DIR 
+
 * Mon Sep 04 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-1
 - First Release
