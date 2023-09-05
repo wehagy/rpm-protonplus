@@ -30,7 +30,9 @@ Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
 Source1:        %{name}.rpmlintrc
 
 
-
+# fdupes need to fix file rpmlint W: files-duplicate
+# /usr/share/icons/hicolor/symbolic/apps/com.vysp3r.ProtonPlus-symbolic.svg /usr/share/icons/hicolor/scalable/apps/com.vysp3r.ProtonPlus.svg
+BuildRequires:  fdupes
 BuildRequires:  gettext
 BuildRequires:  meson
 BuildRequires:  vala
@@ -81,6 +83,9 @@ echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
 
 %find_lang %{flatpak_name}
 
+# create symlinks for icons
+# fix rpmlint W: files-duplicate
+%fdupes -s %{buildroot}%{_datadir}/icons/hicolor
 
 
 %check
