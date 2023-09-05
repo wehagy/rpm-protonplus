@@ -1,4 +1,4 @@
-%define SHA256SUM0      ed22513e39107a88a088304d16eb6ae17fb477b84b555781def578aa5ccbb07e
+%global SHA256SUM0      ed22513e39107a88a088304d16eb6ae17fb477b84b555781def578aa5ccbb07e
 
 %global provider        github
 %global provider_tld    com
@@ -115,6 +115,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- fix: change %%define to %%global
 - fix: macros in changelog
 - changed legacy license format to SPDX
 - fix: W: dangerous-command-in-%%postun rm
