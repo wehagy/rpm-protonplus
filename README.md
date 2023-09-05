@@ -21,6 +21,7 @@ sudo dnf -y copr enable wehagy/protonplus
 ```
 
 Install package:
+
 ```bash
 # Stable
 sudo dnf install protonplus
