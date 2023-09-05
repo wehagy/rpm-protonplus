@@ -115,6 +115,8 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- rebuild v0.4.6-2 because of the file below
+- fix: rename prontonplus-next.rpmlintrc to protonplus.rpmlintrc
 - fix: change %%define to %%global
 - fix: macros in changelog
 - changed legacy license format to SPDX
