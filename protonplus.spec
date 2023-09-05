@@ -115,12 +115,13 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- fix: macros in changelog
 - changed legacy license format to SPDX
-- fix: W: dangerous-command-in-%postun rm
-- fix: W: dangerous-command-in-%post ln
+- fix: W: dangerous-command-in-%%postun rm
+- fix: W: dangerous-command-in-%%post ln
 - fix: general improvements
 - fix: E: standard-dir-owned-by-package
-- fix: W: file-not-in-%lang
+- fix: W: file-not-in-%%lang
 - fix: W: no-manual-page-for-binary 
 - fix: W: files-duplicate
 
