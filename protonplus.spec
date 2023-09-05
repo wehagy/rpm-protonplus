@@ -24,7 +24,7 @@ Release:        2%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 
 ExclusiveArch:  x86_64
-License:        GPLv3+
+License:        GPL-3.0-or-later
 URL:            %{git_repo}
 Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
 Source1:        %{name}.rpmlintrc
@@ -115,6 +115,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
+- changed legacy license format to SPDX
 - fix: W: dangerous-command-in-%postun rm
 - fix: W: dangerous-command-in-%post ln
 - fix: general improvements
