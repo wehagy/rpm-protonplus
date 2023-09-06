@@ -23,7 +23,7 @@
 
 
 
-Name:           protonplus
+Name:           protonplus-next
 Version:        %{gen_version}
 Release:        1%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
