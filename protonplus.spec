@@ -7,17 +7,17 @@
 
 %global provider        github
 %global provider_tld    com
-%global project         vysp3r
+%global owner           vysp3r
 %global repo            ProtonPlus
 %global built_tag       v0.4.6
 %global built_tag_strip %(b=%{built_tag}; echo ${b:1})
 %global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"~"})
 
 # com.vysp3r.ProtonPlus
-%global flatpak_name    %{provider_tld}.%{project}.%{repo}
+%global flatpak_name    %{provider_tld}.%{owner}.%{repo}
 
 # https://github.com/vysp3r/ProtonPlus
-%global provider_prefix %{provider}.%{provider_tld}/%{project}/%{repo}
+%global provider_prefix %{provider}.%{provider_tld}/%{owner}/%{repo}
 %global import_path     %{provider_prefix}
 %global git_repo        https://%{import_path}
 
@@ -122,6 +122,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Tue Nov 09 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
+- rename global variable project to owner
 - add license to source of the specfile
 - add SPDX license header
 
