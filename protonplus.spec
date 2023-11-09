@@ -25,7 +25,7 @@
 
 Name:           protonplus
 Version:        %{gen_version}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 
 ExclusiveArch:  x86_64
@@ -122,6 +122,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Tue Nov 09 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
+- rebuild for fedora 39 release
 - rename global variable project to owner
 - add license to source of the specfile
 - add SPDX license header
