@@ -1,3 +1,8 @@
+# This specfile is licensed under:
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2023 Wesley Gimenes <wehagy+github@gmail.com>
+# See %%{name}.spec.license for the full license text.
+
 %global SHA256SUM0      ed22513e39107a88a088304d16eb6ae17fb477b84b555781def578aa5ccbb07e
 
 %global provider        github
@@ -28,6 +33,8 @@ License:        GPL-3.0-or-later
 URL:            %{git_repo}
 Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
 Source1:        %{name}.rpmlintrc
+# License of the specfile
+Source2:        %{name}.spec.license
 
 
 # fdupes need to fix file rpmlint W: files-duplicate
@@ -114,6 +121,10 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Tue Nov 09 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
+- add license to source of the specfile
+- add SPDX license header
+
 * Tue Sep 05 2023 Wesley H. Gimenes <wehagy+github@gmail.com> - 0.4.6-2
 - rebuild v0.4.6-2 because of the file below
 - fix: rename prontonplus-next.rpmlintrc to protonplus.rpmlintrc
