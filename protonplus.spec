@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2023 Wesley Gimenes <wehagy+github@gmail.com>
 # See %%{name}.spec.license for the full license text.
 
-%global SHA256SUM0      ed22513e39107a88a088304d16eb6ae17fb477b84b555781def578aa5ccbb07e
+%global SHA256SUM0      d66a77a06b46b99e00e7f6d12d0aa68d3d7a08fe53a3d46d9ab8ed068792a84a
 
 %global provider        github
 %global provider_tld    com
 %global owner           vysp3r
 %global repo            ProtonPlus
-%global built_tag       v0.4.6
+%global built_tag       v0.4.7
 %global built_tag_strip %(b=%{built_tag}; echo ${b:1})
 %global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"~"})
 
@@ -25,7 +25,7 @@
 
 Name:           protonplus
 Version:        %{gen_version}
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 
 ExclusiveArch:  x86_64
@@ -121,6 +121,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7-1
+- new upstream version v0.4.7
+
 * Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
 - fix: incorrect day of week in changelog
 
