@@ -121,7 +121,10 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
-* Tue Nov 09 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
+* Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
+- fix: incorrect day of week in changelog
+
+* Thu Nov 09 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
 - rebuild for fedora 39 release
 - rename global variable project to owner
 - add license to source of the specfile
