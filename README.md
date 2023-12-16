@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img align="center" width=150 src="data/icons/hicolor/scalable/apps/com.vysp3r.ProtonPlus.svg" />
+    <img align="center" width=150 src="data/logo/com.vysp3r.ProtonPlus.svg" />
     <br><br>
     ProtonPlus
 </h1>
@@ -36,6 +36,12 @@
 </p>
 
 <p align="center">
+  <a href="https://stopthemingmy.app">
+    <img alt="Please do not theme this app" src="https://stopthemingmy.app/badge.svg"/>
+  </a>
+</p>
+
+<p align="center">
     <i>Join the <a href="https://t.me/ProtonPlus">Telegram</a>/<a href="https://discord.gg/Fyf8bWexpQ">Discord</a>! — Don't forget to star the repo if you are enjoying the project!</i>
 </p>
 
@@ -60,13 +66,14 @@
 
 - [git](https://github.com/git/git)
 - [ninja](https://github.com/ninja-build/ninja)
-- [meson >= 0.59.0](https://github.com/mesonbuild/meson)
+- [meson >= 0.62.0](https://github.com/mesonbuild/meson)
 - [gtk4](https://gitlab.gnome.org/GNOME/gtk/)
-- [libadwaita >= 1.2](https://gitlab.gnome.org/GNOME/libadwaita)
+- [libadwaita >= 1.4](https://gitlab.gnome.org/GNOME/libadwaita)
 - [json-glib](https://gitlab.gnome.org/GNOME/json-glib)
 - [libsoup](https://gitlab.gnome.org/GNOME/libsoup)
 - [libarchive](https://github.com/libarchive/libarchive)
 - [desktop-file-utils](https://gitlab.freedesktop.org/xdg/desktop-file-utils)
+- [libgee](https://gitlab.gnome.org/GNOME/libgee)
 </details>
 
 
@@ -84,7 +91,8 @@
       json-glib-devel \
       libsoup3-devel \
       libarchive-devel \
-      desktop-file-utils
+      desktop-file-utils \
+      libgee-devel
     ```
 
 2. Clone the GitHub repo and change to repo directory:
@@ -166,6 +174,12 @@
 | **Language**      | [Vala](https://gitlab.gnome.org/GNOME/vala) | [Python](https://www.python.org/)                |
 | **Based on**      | Nothing                                     | [ProtonUp](https://github.com/AUNaseef/protonup) |
 | **Looks best on** | [GNOME](https://gitlab.gnome.org/GNOME)     | [KDE](https://kde.org/)                          |
+
+- - - -
+
+## 🌐 Translate ProtonPlus
+
+**You can translate ProtonPlus on Weblate: https://hosted.weblate.org/projects/protonplus/protonplus/**
 
 - - - -
 

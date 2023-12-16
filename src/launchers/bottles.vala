@@ -1,10 +1,10 @@
-namespace ProtonPlus.Shared.Launchers {
+namespace ProtonPlus.Launchers {
     public class Bottles {
         static Models.Group[] get_groups (Models.Launcher launcher) {
             var groups = new Models.Group[2];
 
             groups[0] = new Models.Group (_("Runners"), "/runners", launcher);
-            groups[0].description = "Compatibility tool to run Windows games on Linux";
+            groups[0].description = _("Compatibility tool to run Windows games on Linux");
             groups[0].runners = get_runners (groups[0]);
 
             groups[1] = new Models.Group ("DXVK", "/dxvk", launcher);
@@ -20,7 +20,7 @@ namespace ProtonPlus.Shared.Launchers {
             var launcher = new Models.Launcher (
                                                 "Bottles",
                                                 "System",
-                                                "/com/vysp3r/ProtonPlus/bottles.png",
+                                                "/com/vysp3r/ProtonPlus/images/bottles.png",
                                                 directories
             );
 
