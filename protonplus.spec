@@ -115,13 +115,13 @@ appstream-util validate-relax --nonet \
 %{_datadir}/appdata/%{flatpak_name}.appdata.xml
 %{_datadir}/applications/%{flatpak_name}.desktop
 %{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
-%{_datadir}/icons/hicolor/scalable/apps/%{flatpak_name}.svg
-%{_datadir}/icons/hicolor/symbolic/apps/%{flatpak_name}-symbolic.svg
+%{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.svg
 
 
 
 %changelog
 * Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7-1
+- removed unused files to accomodate new version
 - new upstream version v0.4.7
 
 * Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.6-3
