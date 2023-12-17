@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2023 Wesley Gimenes <wehagy+github@gmail.com>
 # See %%{name}.spec.license for the full license text.
 
-%global SHA256SUM0      d66a77a06b46b99e00e7f6d12d0aa68d3d7a08fe53a3d46d9ab8ed068792a84a
+%global SHA256SUM0      5ab42659ec764753dcdc4c7584d40907e6f4f0b1683ab6235ebc4d6146ac8c93
 
 %global provider        github
 %global provider_tld    com
 %global owner           vysp3r
 %global repo            ProtonPlus
-%global built_tag       v0.4.7
+%global built_tag       v0.4.7-1
 %global built_tag_strip %(b=%{built_tag}; echo ${b:1})
 %global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"~"})
 
@@ -120,6 +120,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7~1-1
+- new upstream version v0.4.7-1
+
 * Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7-1
 - tighten dependencies
 - removed unused files to accomodate new version
