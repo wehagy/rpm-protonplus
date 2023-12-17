@@ -11,7 +11,7 @@
 %global repo            ProtonPlus
 %global built_tag       v0.4.7-1
 %global built_tag_strip %(b=%{built_tag}; echo ${b:1})
-%global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"~"})
+%global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"."})
 
 # com.vysp3r.ProtonPlus
 %global flatpak_name    %{provider_tld}.%{owner}.%{repo}
@@ -121,6 +121,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7.1-1
+- fix: change upstream version dash to dot
 - fix: %%autosetup use upstream versioning
 - new upstream version v0.4.7-1
 
