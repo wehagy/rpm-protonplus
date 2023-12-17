@@ -75,7 +75,7 @@ Supports Steam, Lutris, Heroic and Bottles.
 
 %prep
 echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
-%autosetup -n %{repo}-%{version}
+%autosetup -n %{repo}-%{built_tag_strip}
 
 
 
@@ -120,7 +120,8 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
-* Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7~1-1
+* Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7.1-1
+- fix: %%autosetup use upstream versioning
 - new upstream version v0.4.7-1
 
 * Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7-1
