@@ -98,6 +98,7 @@ echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
 %fdupes -s %{buildroot}%{_datadir}/icons/hicolor
 
 
+
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
 
@@ -121,6 +122,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7.2-1
+- style: fixed indentation
 - new upstream version v0.4.7-2
 
 * Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7.1-1
