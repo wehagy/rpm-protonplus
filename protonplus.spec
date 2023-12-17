@@ -41,7 +41,7 @@ Source2:        %{name}.spec.license
 # /usr/share/icons/hicolor/symbolic/apps/com.vysp3r.ProtonPlus-symbolic.svg /usr/share/icons/hicolor/scalable/apps/com.vysp3r.ProtonPlus.svg
 BuildRequires:  fdupes
 BuildRequires:  gettext
-BuildRequires:  meson
+BuildRequires:  meson >= 0.62.0
 BuildRequires:  vala
 
 BuildRequires:  /usr/bin/appstream-util
@@ -50,7 +50,7 @@ BuildRequires:  /usr/bin/desktop-file-validate
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(json-glib-1.0)
-BuildRequires:  pkgconfig(libadwaita-1)
+BuildRequires:  pkgconfig(libadwaita-1) >= 1.4
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:  pkgconfig(libsoup-3.0)
 
@@ -121,6 +121,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Sat Dec 16 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.7-1
+- tighten dependencies
 - removed unused files to accomodate new version
 - new upstream version v0.4.7
 
