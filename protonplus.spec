@@ -25,7 +25,7 @@
 
 Name:           protonplus
 Version:        %{gen_version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 
 ExclusiveArch:  x86_64
@@ -121,6 +121,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Wed Apr 10 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.9-2
+- build: rebuild for fedora 40 release
+
 * Sun Dec 17 2023 Wesley Gimenes <wehagy+github@gmail.com> - 0.4.9-1
 - new upstream version v0.4.9
 
