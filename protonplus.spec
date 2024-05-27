@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2023 Wesley Gimenes <wehagy+github@gmail.com>
 # See %%{name}.spec.license for the full license text.
 
-%global SHA256SUM0      a986d6722c78901a3e1e55770939b20bed8bd9cc09c1772d476f92bdf779e677
+%global SHA256SUM0      3e52cb76646bf305b365db06e8057ac5956dd1ad8420b8db53c48c5b8d8ac641
 
 %global provider        github
 %global provider_tld    com
 %global owner           vysp3r
 %global repo            ProtonPlus
-%global built_tag       v0.4.9
+%global built_tag       v0.4.10
 %global built_tag_strip %(b=%{built_tag}; echo ${b:1})
 %global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"."})
 
@@ -25,7 +25,7 @@
 
 Name:           protonplus
 Version:        %{gen_version}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
 
 ExclusiveArch:  x86_64
@@ -121,6 +121,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Mon May 27 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.10-1
+- new upstream version v0.4.10
+
 * Wed Apr 10 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.9-2
 - build: rebuild for fedora 40 release
 
