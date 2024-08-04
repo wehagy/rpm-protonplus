@@ -2,18 +2,20 @@
 # izmyname <vi-mcmxcv@proton.me>, 2024.
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 20:04-0400\n"
-"PO-Revision-Date: 2024-03-29 10:01+0000\n"
+"POT-Creation-Date: 2024-07-14 09:56-0400\n"
+"PO-Revision-Date: 2024-05-25 15:49+0500\n"
 "Last-Translator: izmyname <vi-mcmxcv@proton.me>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/protonplus/"
 "protonplus/ru/>\n"
 "Language: ru\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #.
 #.
@@ -39,43 +41,37 @@ msgid "Cancel the installation"
 msgstr "Отменить установку"
 
 #: src/widgets/info-box.vala:224
-#, fuzzy
 msgid "Delete the runner"
 msgstr "Удалить инструмент"
 
 #: src/widgets/info-box.vala:226
-#, fuzzy
 msgid "Are you sure you want to delete "
-msgstr "Вы уверены, что хотите удалить выбранный инструмент? "
+msgstr "Вы уверены, что хотите удалить   "
 
 #: src/widgets/info-box.vala:228
 msgid "Confirm"
 msgstr "Подтвердить"
 
 #: src/widgets/info-box.vala:244
-#, fuzzy
 msgid "Install the runner"
 msgstr "Установить инструмент"
 
 #: src/widgets/info-box.vala:267 src/widgets/info-box.vala:279
 #: src/widgets/info-box.vala:293
-#, fuzzy
 msgid "The installation of "
-msgstr "Описание лаунчера"
+msgstr "Описание лаунчера "
 
 #: src/widgets/info-box.vala:267
 msgid " was cancelled"
 msgstr " отмена"
 
 #: src/widgets/info-box.vala:279
-#, fuzzy
 msgid " was started"
-msgstr "Скачивается..."
+msgstr " скачивается..."
 
 #: src/widgets/info-box.vala:293 src/widgets/info-box.vala:320
-#, fuzzy
 msgid " is done"
-msgstr " Завершено"
+msgstr " завершено"
 
 #: src/widgets/info-box.vala:320
 msgid "The deletion of "
@@ -100,16 +96,17 @@ msgstr "Программа совместимости, для запуска и�
 #: src/launchers/bottles.vala:11 src/launchers/hgl.vala:15
 #: src/launchers/lutris.vala:11
 msgid "Vulkan based implementation of Direct3D 9, 10 and 11 for Linux/Wine"
-msgstr ""
+msgstr "Реализация Direct3D 9, 10 и 11 на базе Vulkan для Linux/Wine"
 
 #: src/launchers/bottles.vala:50 src/launchers/hgl.vala:86
 msgid "Contains improvements over Valve's default Proton."
-msgstr ""
+msgstr "Содержит улучшения по сравнению со стандартным Proton от Valve."
 
-#: src/launchers/bottles.vala:54
+#: src/launchers/bottles.vala:54 src/launchers/hgl.vala:62
+#: src/launchers/lutris.vala:54
 msgid ""
-" Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
-msgstr ""
+"Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
+msgstr "На базе Valve Proton Experimental, разработанного для Lutris."
 
 #: src/launchers/bottles.vala:58 src/launchers/lutris.vala:58
 msgid ""
@@ -133,11 +130,8 @@ msgid ""
 "Fork of Wine's VKD3D which aims to implement the full Direct3D 12 API on top "
 "of Vulkan"
 msgstr ""
-
-#: src/launchers/hgl.vala:62 src/launchers/lutris.vala:54
-msgid ""
-"Based on Valve Proton Experimental's bleeding-edge Wine, built for Lutris."
-msgstr ""
+"Форк VKD3D от Wine, целью которого является реализация полного API Direct3D "
+"12 поверх Vulkan"
 
 #: src/launchers/hgl.vala:66 src/launchers/lutris.vala:61
 msgid "Wine build compiled from the official WineHQ sources."
@@ -145,19 +139,23 @@ msgstr "Сборка Wine, собранная из официального ис
 
 #: src/launchers/hgl.vala:69 src/launchers/lutris.vala:64
 msgid "Wine build with the Staging patchset applied."
-msgstr ""
+msgstr "Сборка Wine с примененным набором исправлений Staging."
 
 #: src/launchers/hgl.vala:72 src/launchers/lutris.vala:67
 msgid ""
 "Wine build with the Staging patchset applied and with many additional useful "
 "patches."
 msgstr ""
+"Сборка Wine с примененным набором исправлений Staging и множеством "
+"дополнительных полезных исправлений."
 
 #: src/launchers/hgl.vala:90 src/launchers/steam.vala:67
 msgid ""
 "Custom Proton build for running Windows games, built with the Wine-tkg build "
 "system."
 msgstr ""
+"Пользовательская сборка Proton для запуска игр под Windows, созданная с "
+"помощью системы сборки Wine-tkg."
 
 #: src/launchers/lutris.vala:7
 msgid "Program which allows running Microsoft Windows programs"
@@ -165,39 +163,50 @@ msgstr "Программа, позволяющая запустить прогр
 
 #: src/launchers/lutris.vala:87
 msgid "Contains RTX fix for Star Citizen."
-msgstr "Содержит правку RTX для Star Citizen"
+msgstr "Содержит правку RTX для Star Citizen."
 
 #: src/launchers/steam.vala:63
 msgid ""
 "Steam compatibility tool for running Windows games with improvements over "
 "Valve's default Proton."
 msgstr ""
+"Инструмент совместимости Steam для запуска игр под Windows с улучшениями по "
+"сравнению со стандартным Proton от Valve."
 
 #: src/launchers/steam.vala:71
 msgid ""
 "Luxtorpeda provides Linux-native game engines for specific Windows-only "
 "games."
 msgstr ""
+"Luxtorpeda предоставляет нативные игровые движки для специфических игр, "
+"предназначенных только для Windows."
 
 #: src/launchers/steam.vala:72
 msgid ""
 "Steam Play compatibility tool to run DOS games using native Linux DOSBox."
 msgstr ""
+"Инструмент совместимости Steam Play для запуска DOS-игр с помощью нативного "
+"DOSBox."
 
 #: src/launchers/steam.vala:73
 msgid ""
 "Steam Play compatibility tool to run adventure games using native Linux "
 "ScummVM."
 msgstr ""
+"Инструмент совместимости со Steam Play для запуска приключенческих игр с "
+"использованием нативного ScummVM."
 
 #: src/launchers/steam.vala:74
 msgid "Custom Proton build for running the Northstar client for Titanfall 2."
 msgstr ""
+"Специальная сборка Proton для запуска клиента Northstar для Titanfall 2."
 
 #: src/launchers/steam.vala:75
 msgid ""
 "Compatibility tool for Steam Play based on Wine and additional components."
 msgstr ""
+"Инструмент совместимости для Steam Play на основе Wine и дополнительных "
+"компонентов."
 
 #: src/models/release.vala:60
 msgid "Not available"
@@ -222,6 +231,11 @@ msgstr ""
 #: src/application.vala:68
 msgid "Special thanks to"
 msgstr "Отдельная благодарность"
+
+#~ msgid ""
+#~ " Based on Valve Proton Experimental's bleeding-edge Wine, built for "
+#~ "Lutris."
+#~ msgstr "На базе Valve Proton Experimental, разработанного для Lutris."
 
 #~ msgid "Preferences"
 #~ msgstr "Настройки"

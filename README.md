@@ -10,7 +10,7 @@
 
 <p align="center">
     <a align="center" href="https://flathub.org/apps/com.vysp3r.ProtonPlus">
-        <img width='240' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-i-en.svg' />
+        <img width='240' alt='Download on Flathub' src='https://flathub.org/api/badge?svg&locale=en&light' />
     </a>
 </p>
 
@@ -30,9 +30,6 @@
     <a href="https://t.me/ProtonPlus">
       <img alt="Telegram" title="Telegram" src="https://img.shields.io/endpoint?color=neon&style=shield&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2FProtonPlus">
     </a>
-    <a href="https://discord.gg/Fyf8bWexpQ">
-      <img alt="Discord" title="Discord" src="https://dcbadge.vercel.app/api/server/Fyf8bWexpQ?style=flat&theme=default-inverted">
-    </a>
 </p>
 
 <p align="center">
@@ -42,7 +39,7 @@
 </p>
 
 <p align="center">
-    <i>Join the <a href="https://t.me/ProtonPlus">Telegram</a>/<a href="https://discord.gg/Fyf8bWexpQ">Discord</a>! — Don't forget to star the repo if you are enjoying the project!</i>
+    Don't forget to star the repo if you are enjoying the project!</i>
 </p>
 
 [<img alt='Download on Flathub' src='data/previews/Preview-1.png' />](https://flathub.org/apps/details/com.vysp3r.ProtonPlus)
@@ -52,10 +49,16 @@
 ## 📦️ Alternative installation methods
 
 > **Warning**
-> The main installation method is Flatpak from Flathub
+> The main installation method is Flathub
 
 ### Arch Linux (AUR)
 [https://aur.archlinux.org/packages/protonplus](https://aur.archlinux.org/packages/protonplus) (Maintained by yochananmarqos)
+
+### Fedora (COPR)
+[https://copr.fedorainfracloud.org/coprs/wehagy/protonplus/](https://copr.fedorainfracloud.org/coprs/wehagy/protonplus/) (Maintained by wehagy)
+
+### NixOS (MyNixOS)
+[https://mynixos.com/nixpkgs/package/protonplus](https://mynixos.com/nixpkgs/package/protonplus) (Maintained by Seth)
 
 - - - -
 
