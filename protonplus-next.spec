@@ -19,7 +19,7 @@
 %undefine distprefix
 
 
-Name:           protonplus
+Name:           protonplus-next
 Version:        %{fileref}
 Release:        %autorelease
 Summary:        A modern compatibility tools manager for Linux
@@ -31,7 +31,7 @@ Source0:        %{forgesource}
 # license of the spec file
 Source1:        LICENSE
 Source2:        README.md
-Source3:        %{name}.rpmlintrc
+Source3:        protonplus.rpmlintrc
 
 ##### Build dependencies
 BuildRequires:  gettext
@@ -113,7 +113,7 @@ Supported compatibility tools:
 %files -f %{app_id}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
-%{_bindir}/%{name}
+%{_bindir}/protonplus
 %{_datadir}/applications/%{app_id}.desktop
 %{_datadir}/glib-2.0/schemas/%{app_id}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{app_id}.png
