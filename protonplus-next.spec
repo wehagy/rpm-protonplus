@@ -22,7 +22,7 @@
 
 
 
-Name:           %{lower %{repo}}
+Name:           %{lower %{repo}}-next
 Version:        %{gen_version}
 Release:        1%{?dist}
 Summary:        A modern compatibility tools manager for Linux
@@ -125,7 +125,7 @@ sha256sum -c <(echo "%{sha256sum0} %{SOURCE0}")
 %files -f %{app_id}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
-%{_bindir}/%{name}
+%{_bindir}/%{lower %{repo}}
 %{_datadir}/applications/%{app_id}.desktop
 %{_datadir}/glib-2.0/schemas/%{app_id}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{app_id}.png
