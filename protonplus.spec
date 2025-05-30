@@ -9,7 +9,7 @@
 %global owner           vysp3r
 %global repo            ProtonPlus
 %global tag             v0.4.31
-%global tag_strip       %{sub %{tag} 2}
+%global tag_strip       %{gsub %{tag} v %{quote:}}
 %global gen_version     %{gsub %{tag_strip} - .}
 
 # com.vysp3r.ProtonPlus
@@ -138,6 +138,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- make macro tag_strip more robust
 - rename macro tag_strip -> tag
 - rename macro built_tag_strip -> tag_strip
 - rename macro flatpak_name -> app_id
