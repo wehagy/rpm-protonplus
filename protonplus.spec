@@ -1,7 +1,6 @@
-# This specfile is licensed under:
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2023 Wesley Gimenes <wehagy+github@gmail.com>
-# See %%{name}.spec.license for the full license text.
+# SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
+# SPDX-Comment: See LICENSE for the full license text
 
 %global SHA256SUM0      1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
 
@@ -124,6 +123,7 @@ appstream-util validate-relax --nonet \
 * Thu May 29 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-1
 - new upstream version v0.4.31
 - update README.md
+- update SPDX copyright
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
