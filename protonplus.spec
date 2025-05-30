@@ -2,24 +2,32 @@
 # SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
 # SPDX-Comment: See LICENSE for the full license text
 
-%global SHA256SUM0      1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
+# BuildRequires dependencies
+%global meson_version       0.62.0
+%global libadwaita_version  1.5
 
-%global provider        github
-%global provider_tld    com
-%global owner           vysp3r
-%global repo            ProtonPlus
-%global tag             v0.4.31
-%global tag_strip       %{gsub %{tag} v %{quote:}}
+# Recommends dependencies
+%global yad_version         7.2
+
+
+%global SHA256SUM0          1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
+
+%global provider            github
+%global provider_tld        com
+%global owner               vysp3r
+%global repo                ProtonPlus
+%global tag                 v0.4.31
+%global tag_strip           %{gsub %{tag} v %{quote:}}
 # sometimes upstream version contains dashes, replace them with dots
-%global gen_version     %{gsub %{tag_strip} - .}
+%global gen_version         %{gsub %{tag_strip} - .}
 
 # com.vysp3r.ProtonPlus
-%global app_id          %{provider_tld}.%{owner}.%{repo}
+%global app_id              %{provider_tld}.%{owner}.%{repo}
 
 # https://github.com/vysp3r/ProtonPlus
-%global provider_prefix %{provider}.%{provider_tld}/%{owner}/%{repo}
-%global import_path     %{provider_prefix}
-%global git_repo        https://%{import_path}
+%global provider_prefix     %{provider}.%{provider_tld}/%{owner}/%{repo}
+%global import_path         %{provider_prefix}
+%global git_repo            https://%{import_path}
 
 
 
@@ -42,7 +50,7 @@ Patch0:         rename-executable-to-protonplus.patch
 
 
 BuildRequires:  gettext
-BuildRequires:  meson >= 0.62.0
+BuildRequires:  meson >= %{meson_version}
 BuildRequires:  vala
 
 # desktop-file-validate command
@@ -54,7 +62,7 @@ BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(json-glib-1.0)
-BuildRequires:  pkgconfig(libadwaita-1) >= 1.5
+BuildRequires:  pkgconfig(libadwaita-1) >= %{libadwaita_version}
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:  pkgconfig(libsoup-3.0)
 
@@ -78,7 +86,7 @@ Recommends:     xprop
 Recommends:     xrandr
 Recommends:     xwininfo
 Recommends:     xxd
-Recommends:     yad >= 7.2
+Recommends:     yad >= %{yad_version}
 
 
 
@@ -139,6 +147,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- add global macros meson_version, libadwaita_version and yad_version
 - comment why the gen_version macro is need
 - make macro tag_strip more robust
 - rename macro tag_strip -> tag
