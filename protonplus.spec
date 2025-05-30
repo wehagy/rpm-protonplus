@@ -36,9 +36,6 @@ Source1:        %{name}.rpmlintrc
 Source2:        %{name}.spec.license
 
 
-# fdupes need to fix file rpmlint W: files-duplicate
-# /usr/share/icons/hicolor/symbolic/apps/com.vysp3r.ProtonPlus-symbolic.svg /usr/share/icons/hicolor/scalable/apps/com.vysp3r.ProtonPlus.svg
-BuildRequires:  fdupes
 BuildRequires:  gettext
 BuildRequires:  meson >= 0.62.0
 BuildRequires:  vala
@@ -104,12 +101,6 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 # create symlink prontonplus -> com.vysp3r.ProtonPlus
 %{__ln_s} %{_bindir}/%{flatpak_name} %{buildroot}%{_bindir}/%{name}
 
-# create symlinks for icons
-# fix rpmlint W: files-duplicate
-%fdupes -s %{buildroot}%{_datadir}/icons/hicolor
-
-
-
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
 
@@ -140,6 +131,7 @@ appstream-util validate-relax --nonet \
 - rename *.svg to *.png
 - modernize macros
 - add SteamTinkerLaunch dependencies
+- remove fdupes
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
