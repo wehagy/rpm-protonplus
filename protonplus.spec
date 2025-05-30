@@ -35,8 +35,8 @@ Name:           %{lower %{repo}}
 Version:        %{gen_version}
 Release:        1%{?dist}
 Summary:        A modern compatibility tools manager for Linux
-
 ExclusiveArch:  x86_64
+
 License:        GPL-3.0-or-later
 URL:            %{git_repo}
 Source0:        %{url}/archive/%{tag}/%{repo}-%{version}.tar.gz
@@ -147,6 +147,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- change ExclusiveArch position
 - add global macros meson_version, libadwaita_version and yad_version
 - comment why the gen_version macro is need
 - make macro tag_strip more robust
