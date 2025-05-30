@@ -54,6 +54,9 @@ BuildRequires:  pkgconfig(libsoup-3.0)
 
 # Need for TLS support
 Requires:       glib-networking
+# fix: Package must own all directories that it creates.
+# Directories without known owners: /usr/share/icons/hicolor/*
+Requires:       hicolor-icon-theme
 
 
 # SteamTinkerLaunch
@@ -132,6 +135,7 @@ appstream-util validate-relax --nonet \
 - modernize macros
 - add SteamTinkerLaunch dependencies
 - remove fdupes
+- fix Package must own all directories that it creates.
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
