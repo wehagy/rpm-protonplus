@@ -13,7 +13,7 @@
 %global gen_version     %{gsub %{built_tag_strip} - .}
 
 # com.vysp3r.ProtonPlus
-%global flatpak_name    %{provider_tld}.%{owner}.%{repo}
+%global app_id          %{provider_tld}.%{owner}.%{repo}
 
 # https://github.com/vysp3r/ProtonPlus
 %global provider_prefix %{provider}.%{provider_tld}/%{owner}/%{repo}
@@ -114,29 +114,32 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 
 %install
 %meson_install
-%find_lang %{flatpak_name}
+%find_lang %{app_id}
 
 
 %check
 desktop-file-validate \
-  %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
+  %{buildroot}%{_datadir}/applications/%{app_id}.desktop
 
 appstream-util validate-relax --nonet \
-  %{buildroot}%{_metainfodir}/%{flatpak_name}.metainfo.xml
+  %{buildroot}%{_metainfodir}/%{app_id}.metainfo.xml
 
 
-%files -f %{flatpak_name}.lang
+%files -f %{app_id}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
 %{_bindir}/%{name}
-%{_datadir}/applications/%{flatpak_name}.desktop
-%{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
-%{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.png
-%{_metainfodir}/%{flatpak_name}.metainfo.xml
+%{_datadir}/applications/%{app_id}.desktop
+%{_datadir}/glib-2.0/schemas/%{app_id}.gschema.xml
+%{_datadir}/icons/hicolor/*/apps/%{app_id}.png
+%{_metainfodir}/%{app_id}.metainfo.xml
 
 
 
 %changelog
+* Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- rename macro flatpak_name -> app_id
+
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-1
 - add patch rename executable to protonplus
 
