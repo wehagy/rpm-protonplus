@@ -25,7 +25,7 @@
 Name:           protonplus
 Version:        %{gen_version}
 Release:        1%{?dist}
-Summary:        Simple and powerful manager for Wine, Proton, DXVK and VKD3D
+Summary:        A modern compatibility tools manager for Linux
 
 ExclusiveArch:  x86_64
 License:        GPL-3.0-or-later
@@ -73,16 +73,27 @@ Recommends:     xwininfo
 Recommends:     xxd
 Recommends:     yad >= 7.2
 
+
+
 %description
-%{repo} is a simple and powerful manager for:
- - Wine
- - Proton
+Install and manage Wine/Proton based compatibility tools
+with a graphical user interface.
+
+Supported launchers:
+ - Steam
+ - Lutris
+ - Heroic Games Launcher
+ - Bottles
+
+Supported compatibility tools:
+ - Steam Tinker Launch
+ - Proton-GE
+ - Luxtorpeda
+ - Boxtron
+ - Roberta
+ - NorthstarProton
  - DXVK
- - VKD3D
- - Several other runners
-
-Supports Steam, Lutris, Heroic and Bottles.
-
+ - And much more
 
 
 %prep
@@ -136,6 +147,7 @@ appstream-util validate-relax --nonet \
 - add SteamTinkerLaunch dependencies
 - remove fdupes
 - fix Package must own all directories that it creates.
+- sync description with upstream
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
