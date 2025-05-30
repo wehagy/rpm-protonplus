@@ -102,7 +102,7 @@ echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
 
 appstream-util validate-relax --nonet \
-    %{buildroot}%{_datadir}/appdata/%{flatpak_name}.appdata.xml
+    %{buildroot}%{_datadir}/appdata/%{flatpak_name}.metainfo.xml
 
 
 
@@ -112,10 +112,10 @@ appstream-util validate-relax --nonet \
 # install symlink prontonplus -> com.vysp3r.ProtonPlus
 %{_bindir}/%{name}
 %{_bindir}/%{flatpak_name}
-%{_datadir}/appdata/%{flatpak_name}.appdata.xml
 %{_datadir}/applications/%{flatpak_name}.desktop
 %{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.svg
+%{_metainfodir}/%{flatpak_name}.metainfo.xml
 
 
 
@@ -124,6 +124,7 @@ appstream-util validate-relax --nonet \
 - new upstream version v0.4.31
 - update README.md
 - update SPDX copyright
+- rename *.appdata.xml to *.metainfo.xml
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
