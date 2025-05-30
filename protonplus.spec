@@ -22,7 +22,7 @@
 
 
 
-Name:           protonplus
+Name:           %{lower %{repo}}
 Version:        %{gen_version}
 Release:        1%{?dist}
 Summary:        A modern compatibility tools manager for Linux
@@ -152,6 +152,7 @@ appstream-util validate-relax --nonet \
 - rework BuildRequires
 - revise comments and fix indentation
 - add README.md and LICENSE to rpm package
+- change Name to macro lowercase
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
