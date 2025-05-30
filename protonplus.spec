@@ -114,7 +114,7 @@ appstream-util validate-relax --nonet \
 %{_bindir}/%{flatpak_name}
 %{_datadir}/applications/%{flatpak_name}.desktop
 %{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
-%{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.svg
+%{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.png
 %{_metainfodir}/%{flatpak_name}.metainfo.xml
 
 
@@ -125,6 +125,7 @@ appstream-util validate-relax --nonet \
 - update README.md
 - update SPDX copyright
 - rename *.appdata.xml to *.metainfo.xml
+- rename *.svg to *.png
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
