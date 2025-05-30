@@ -40,13 +40,16 @@ BuildRequires:  gettext
 BuildRequires:  meson >= 0.62.0
 BuildRequires:  vala
 
-BuildRequires:  /usr/bin/appstream-util
-BuildRequires:  /usr/bin/desktop-file-validate
+# desktop-file-validate command
+BuildRequires:  desktop-file-utils
+# appstream-util command
+BuildRequires:  libappstream-glib
 
 BuildRequires:  pkgconfig(gee-0.8)
+BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(json-glib-1.0)
-BuildRequires:  pkgconfig(libadwaita-1) >= 1.4
+BuildRequires:  pkgconfig(libadwaita-1) >= 1.5
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:  pkgconfig(libsoup-3.0)
 
@@ -148,6 +151,7 @@ appstream-util validate-relax --nonet \
 - remove fdupes
 - fix Package must own all directories that it creates.
 - sync description with upstream
+- rework BuildRequires
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
