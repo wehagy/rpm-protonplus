@@ -54,8 +54,7 @@ BuildRequires:  pkgconfig(libarchive)
 BuildRequires:  pkgconfig(libsoup-3.0)
 
 
-
-# Need for TLS support
+# TLS support
 Requires:       glib-networking
 # fix: Package must own all directories that it creates.
 # Directories without known owners: /usr/share/icons/hicolor/*
@@ -109,21 +108,19 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 %meson_build
 
 
-
 %install
 %meson_install
-
 %find_lang %{flatpak_name}
 
 # create symlink prontonplus -> com.vysp3r.ProtonPlus
 %{__ln_s} %{_bindir}/%{flatpak_name} %{buildroot}%{_bindir}/%{name}
 
 %check
-desktop-file-validate %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
+desktop-file-validate \
+  %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
 
 appstream-util validate-relax --nonet \
-    %{buildroot}%{_datadir}/appdata/%{flatpak_name}.metainfo.xml
-
+  %{buildroot}%{_metainfodir}/%{flatpak_name}.metainfo.xml
 
 
 %files -f %{flatpak_name}.lang
@@ -152,6 +149,7 @@ appstream-util validate-relax --nonet \
 - fix Package must own all directories that it creates.
 - sync description with upstream
 - rework BuildRequires
+- revise comments and fix indentation
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
