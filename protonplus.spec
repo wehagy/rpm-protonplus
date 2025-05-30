@@ -37,6 +37,9 @@ Source2:        LICENSE
 Source3:        %{name}.rpmlintrc
 
 
+Patch0:         rename-executable-to-protonplus.patch
+
+
 BuildRequires:  gettext
 BuildRequires:  meson >= 0.62.0
 BuildRequires:  vala
@@ -101,7 +104,7 @@ Supported compatibility tools:
 
 %prep
 sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
-%autosetup -n %{repo}-%{built_tag_strip}
+%autosetup -p1 -n %{repo}-%{built_tag_strip}
 
 
 %build
@@ -113,8 +116,6 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 %meson_install
 %find_lang %{flatpak_name}
 
-# create symlink prontonplus -> com.vysp3r.ProtonPlus
-%{__ln_s} %{_bindir}/%{flatpak_name} %{buildroot}%{_bindir}/%{name}
 
 %check
 desktop-file-validate \
@@ -127,9 +128,7 @@ appstream-util validate-relax --nonet \
 %files -f %{flatpak_name}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
-# install symlink prontonplus -> com.vysp3r.ProtonPlus
 %{_bindir}/%{name}
-%{_bindir}/%{flatpak_name}
 %{_datadir}/applications/%{flatpak_name}.desktop
 %{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.png
@@ -138,6 +137,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-1
+- add patch rename executable to protonplus
+
 * Thu May 29 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-1
 - new upstream version v0.4.31
 - update README.md
