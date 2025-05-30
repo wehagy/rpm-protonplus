@@ -9,8 +9,8 @@
 %global owner           vysp3r
 %global repo            ProtonPlus
 %global built_tag       v0.4.31
-%global built_tag_strip %(b=%{built_tag}; echo ${b:1})
-%global gen_version     %(b=%{built_tag_strip}; echo ${b/-/"."})
+%global built_tag_strip %{sub %{built_tag} 2}
+%global gen_version     %{gsub %{built_tag_strip} - .}
 
 # com.vysp3r.ProtonPlus
 %global flatpak_name    %{provider_tld}.%{owner}.%{repo}
@@ -73,9 +73,8 @@ Supports Steam, Lutris, Heroic and Bottles.
 
 
 %prep
-echo "%SHA256SUM0 %{SOURCE0}" | sha256sum -c -
+sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 %autosetup -n %{repo}-%{built_tag_strip}
-
 
 
 %build
@@ -126,6 +125,7 @@ appstream-util validate-relax --nonet \
 - update SPDX copyright
 - rename *.appdata.xml to *.metainfo.xml
 - rename *.svg to *.png
+- modernize macros
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
