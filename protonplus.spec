@@ -47,6 +47,7 @@ Source3:        %{name}.rpmlintrc
 
 
 Patch0:         rename-executable-to-protonplus.patch
+Patch1:         fix-appstream-util-test.patch
 
 
 BuildRequires:  gettext
@@ -127,11 +128,7 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 
 
 %check
-desktop-file-validate \
-  %{buildroot}%{_datadir}/applications/%{app_id}.desktop
-
-appstream-util validate-relax --nonet \
-  %{buildroot}%{_metainfodir}/%{app_id}.metainfo.xml
+%meson_test
 
 
 %files -f %{app_id}.lang
@@ -147,6 +144,8 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- change manual tests to macro %%meson_test
+- add patch fix appstream-util test
 - change ExclusiveArch position
 - add global macros meson_version, libadwaita_version and yad_version
 - comment why the gen_version macro is need
