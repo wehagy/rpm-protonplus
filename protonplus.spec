@@ -8,8 +8,8 @@
 %global provider_tld    com
 %global owner           vysp3r
 %global repo            ProtonPlus
-%global built_tag       v0.4.31
-%global tag_strip       %{sub %{built_tag} 2}
+%global tag             v0.4.31
+%global tag_strip       %{sub %{tag} 2}
 %global gen_version     %{gsub %{tag_strip} - .}
 
 # com.vysp3r.ProtonPlus
@@ -30,7 +30,7 @@ Summary:        A modern compatibility tools manager for Linux
 ExclusiveArch:  x86_64
 License:        GPL-3.0-or-later
 URL:            %{git_repo}
-Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
+Source0:        %{url}/archive/%{tag}/%{repo}-%{version}.tar.gz
 Source1:        README.md
 # license of the spec file
 Source2:        LICENSE
@@ -138,6 +138,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- rename macro tag_strip -> tag
 - rename macro built_tag_strip -> tag_strip
 - rename macro flatpak_name -> app_id
 
