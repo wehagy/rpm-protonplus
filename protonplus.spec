@@ -31,9 +31,10 @@ ExclusiveArch:  x86_64
 License:        GPL-3.0-or-later
 URL:            %{git_repo}
 Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
-Source1:        %{name}.rpmlintrc
-# License of the specfile
-Source2:        %{name}.spec.license
+Source1:        README.md
+# license of the spec file
+Source2:        LICENSE
+Source3:        %{name}.rpmlintrc
 
 
 BuildRequires:  gettext
@@ -150,6 +151,7 @@ appstream-util validate-relax --nonet \
 - sync description with upstream
 - rework BuildRequires
 - revise comments and fix indentation
+- add README.md and LICENSE to rpm package
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
