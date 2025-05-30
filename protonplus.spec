@@ -123,6 +123,7 @@ appstream-util validate-relax --nonet \
 %changelog
 * Thu May 29 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-1
 - new upstream version v0.4.31
+- update README.md
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
