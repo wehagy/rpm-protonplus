@@ -9,8 +9,8 @@
 %global owner           vysp3r
 %global repo            ProtonPlus
 %global built_tag       v0.4.31
-%global built_tag_strip %{sub %{built_tag} 2}
-%global gen_version     %{gsub %{built_tag_strip} - .}
+%global tag_strip       %{sub %{built_tag} 2}
+%global gen_version     %{gsub %{tag_strip} - .}
 
 # com.vysp3r.ProtonPlus
 %global app_id          %{provider_tld}.%{owner}.%{repo}
@@ -104,7 +104,7 @@ Supported compatibility tools:
 
 %prep
 sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
-%autosetup -p1 -n %{repo}-%{built_tag_strip}
+%autosetup -p1 -n %{repo}-%{tag_strip}
 
 
 %build
@@ -138,6 +138,7 @@ appstream-util validate-relax --nonet \
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- rename macro built_tag_strip -> tag_strip
 - rename macro flatpak_name -> app_id
 
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-1
