@@ -59,6 +59,19 @@ BuildRequires:  pkgconfig(libsoup-3.0)
 Requires:       glib-networking
 
 
+# SteamTinkerLaunch
+Recommends:     bash
+Recommends:     gawk
+Recommends:     git
+Recommends:     procps-ng
+Recommends:     unzip
+Recommends:     wget
+Recommends:     xdotool
+Recommends:     xprop
+Recommends:     xrandr
+Recommends:     xwininfo
+Recommends:     xxd
+Recommends:     yad >= 7.2
 
 %description
 %{repo} is a simple and powerful manager for:
@@ -126,6 +139,7 @@ appstream-util validate-relax --nonet \
 - rename *.appdata.xml to *.metainfo.xml
 - rename *.svg to *.png
 - modernize macros
+- add SteamTinkerLaunch dependencies
 
 * Sun Aug 04 2024 Wesley Gimenes <wehagy@proton.me> - 0.4.11-1
 - new upstream version v0.4.11
