@@ -135,6 +135,7 @@ sha256sum -c <(echo "%{sha256sum0} %{SOURCE0}")
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- placeholder
 - rename global macro SHA256SUM0 -> sha256sum0
 - rework to use forgemeta macro
 - change manual tests to macro %%meson_test
