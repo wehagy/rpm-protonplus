@@ -2,6 +2,10 @@
 # SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
 # SPDX-Comment: See LICENSE for the full license text
 
+%global SHA256SUM0          1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
+%global tag                 v0.4.31
+
+
 # BuildRequires dependencies
 %global meson_version       0.62.0
 %global libadwaita_version  1.5
@@ -10,24 +14,11 @@
 %global yad_version         7.2
 
 
-%global SHA256SUM0          1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
-
-%global provider            github
-%global provider_tld        com
-%global owner               vysp3r
-%global repo                ProtonPlus
-%global tag                 v0.4.31
-%global tag_strip           %{gsub %{tag} v %{quote:}}
+%global app_id              com.vysp3r.ProtonPlus
+%global forgeurl            https://github.com/vysp3r/ProtonPlus
+%forgemeta
 # sometimes upstream version contains dashes, replace them with dots
-%global gen_version         %{gsub %{tag_strip} - .}
-
-# com.vysp3r.ProtonPlus
-%global app_id              %{provider_tld}.%{owner}.%{repo}
-
-# https://github.com/vysp3r/ProtonPlus
-%global provider_prefix     %{provider}.%{provider_tld}/%{owner}/%{repo}
-%global import_path         %{provider_prefix}
-%global git_repo            https://%{import_path}
+%global gen_version         %{gsub %{fileref} - .}
 
 
 
@@ -38,8 +29,8 @@ Summary:        A modern compatibility tools manager for Linux
 ExclusiveArch:  x86_64
 
 License:        GPL-3.0-or-later
-URL:            %{git_repo}
-Source0:        %{url}/archive/%{tag}/%{repo}-%{version}.tar.gz
+URL:            %{forgeurl}
+Source0:        %{forgesource}
 Source1:        README.md
 # license of the spec file
 Source2:        LICENSE
@@ -114,7 +105,7 @@ Supported compatibility tools:
 
 %prep
 sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
-%autosetup -p1 -n %{repo}-%{tag_strip}
+%forgeautosetup -p1
 
 
 %build
@@ -144,6 +135,7 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- rework to use forgemeta macro
 - change manual tests to macro %%meson_test
 - add patch fix appstream-util test
 - change ExclusiveArch position
