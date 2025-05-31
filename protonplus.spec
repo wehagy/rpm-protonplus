@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
 # SPDX-Comment: See LICENSE for the full license text
 
-%global SHA256SUM0          1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
+%global sha256sum0          1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
 %global tag                 v0.4.31
 
 
@@ -104,7 +104,7 @@ Supported compatibility tools:
 
 
 %prep
-sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
+sha256sum -c <(echo "%{sha256sum0} %{SOURCE0}")
 %forgeautosetup -p1
 
 
@@ -135,6 +135,7 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 
 %changelog
 * Fri May 30 2025 Wesley Gimenes <wehagy@proton.me> - 0.4.31-2
+- rename global macro SHA256SUM0 -> sha256sum0
 - rework to use forgemeta macro
 - change manual tests to macro %%meson_test
 - add patch fix appstream-util test
