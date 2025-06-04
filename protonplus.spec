@@ -2,13 +2,13 @@
 # SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
 # SPDX-Comment: See LICENSE for the full license text
 
-%global SHA256SUM0      1abbf8053f37b2cc765c18cb2d5b355e687d25b32bbb1bd0426749295328b357
+%global SHA256SUM0      293e6baa296c36e0442500f9efd573b112fc2403e77e748136a702340d6069a4
 
 %global provider        github
 %global provider_tld    com
 %global owner           vysp3r
 %global repo            ProtonPlus
-%global built_tag       v0.4.31
+%global built_tag       v0.4.32
 %global built_tag_strip %{sub %{built_tag} 2}
 %global gen_version     %{gsub %{built_tag_strip} - .}
 
@@ -22,22 +22,19 @@
 
 
 
-Name:           %{lower %{repo}}
+Name:           protonplus
 Version:        %{gen_version}
 Release:        %autorelease
 Summary:        A modern compatibility tools manager for Linux
 
 ExclusiveArch:  x86_64
 License:        GPL-3.0-or-later
-URL:            %{git_repo}
+URL:            https://protonplus.vysp3r.com
 Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
 Source1:        README.md
 # license of the spec file
 Source2:        LICENSE
 Source3:        %{name}.rpmlintrc
-
-
-Patch0:         rename-executable-to-protonplus.patch
 
 
 BuildRequires:  gettext
@@ -104,7 +101,7 @@ Supported compatibility tools:
 
 %prep
 sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
-%autosetup -p1 -n %{repo}-%{built_tag_strip}
+%autosetup -n %{repo}-%{built_tag_strip}
 
 
 %build
