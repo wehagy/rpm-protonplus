@@ -115,12 +115,7 @@ sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
 
 
 %check
-desktop-file-validate \
-  %{buildroot}%{_datadir}/applications/%{flatpak_name}.desktop
-
-appstream-util validate-relax --nonet \
-  %{buildroot}%{_metainfodir}/%{flatpak_name}.metainfo.xml
-
+%meson_test
 
 %files -f %{flatpak_name}.lang
 %license LICENSE.md
