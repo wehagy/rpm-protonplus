@@ -2,67 +2,61 @@
 # SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
 # SPDX-Comment: See LICENSE for the full license text
 
-%global SHA256SUM0      293e6baa296c36e0442500f9efd573b112fc2403e77e748136a702340d6069a4
+##### Variable macros
+%global tag                 v0.4.32
+# BuildRequires dependencies
+%global meson_version       1.0.0
+%global libadwaita_version  1.5
+# Recommends dependencies
+%global yad_version         7.2
 
-%global provider        github
-%global provider_tld    com
-%global owner           vysp3r
-%global repo            ProtonPlus
-%global built_tag       v0.4.32
-%global built_tag_strip %{sub %{built_tag} 2}
-%global gen_version     %{gsub %{built_tag_strip} - .}
-
-# com.vysp3r.ProtonPlus
-%global flatpak_name    %{provider_tld}.%{owner}.%{repo}
-
-# https://github.com/vysp3r/ProtonPlus
-%global provider_prefix %{provider}.%{provider_tld}/%{owner}/%{repo}
-%global import_path     %{provider_prefix}
-%global git_repo        https://%{import_path}
-
+##### Constant macros
+%global app_id              com.vysp3r.ProtonPlus
+%global forgeurl            https://github.com/vysp3r/ProtonPlus
+# forgemeta macro need to be after forgeurl and tag macros
+%forgemeta
+# unset weird prefix set by forgemeta (.gitvX.X.X)
+%undefine distprefix
 
 
 Name:           protonplus
-Version:        %{gen_version}
+Version:        %{fileref}
 Release:        %autorelease
 Summary:        A modern compatibility tools manager for Linux
-
 ExclusiveArch:  x86_64
+
 License:        GPL-3.0-or-later
 URL:            https://protonplus.vysp3r.com
-Source0:        %{url}/archive/%{built_tag}/%{repo}-%{version}.tar.gz
-Source1:        README.md
+Source0:        %{forgesource}
 # license of the spec file
-Source2:        LICENSE
+Source1:        LICENSE
+Source2:        README.md
 Source3:        %{name}.rpmlintrc
 
-
+##### Build dependencies
 BuildRequires:  gettext
-BuildRequires:  meson >= 0.62.0
+BuildRequires:  meson >= %{meson_version}
 BuildRequires:  vala
-
-# desktop-file-validate command
-BuildRequires:  desktop-file-utils
-# appstream-util command
-BuildRequires:  libappstream-glib
 
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(json-glib-1.0)
-BuildRequires:  pkgconfig(libadwaita-1) >= 1.5
+BuildRequires:  pkgconfig(libadwaita-1) >= %{libadwaita_version}
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:  pkgconfig(libsoup-3.0)
 
+##### Check dependencies
+# desktop-file-validate command
+BuildRequires:  desktop-file-utils
+# appstream-util command
+BuildRequires:  libappstream-glib
 
-# TLS support
-Requires:       glib-networking
-# fix: Package must own all directories that it creates.
-# Directories without known owners: /usr/share/icons/hicolor/*
+##### Runtime dependencies
+# fix: Directories without known owners: /usr/share/icons/hicolor/*
 Requires:       hicolor-icon-theme
 
-
-# SteamTinkerLaunch
+##### SteamTinkerLaunch dependencies
 Recommends:     bash
 Recommends:     gawk
 Recommends:     git
@@ -74,8 +68,7 @@ Recommends:     xprop
 Recommends:     xrandr
 Recommends:     xwininfo
 Recommends:     xxd
-Recommends:     yad >= 7.2
-
+Recommends:     yad >= %{yad_version}
 
 
 %description
@@ -98,35 +91,28 @@ Supported compatibility tools:
  - DXVK
  - And much more
 
-
 %prep
-sha256sum -c <(echo "%{SHA256SUM0} %{SOURCE0}")
-%autosetup -n %{repo}-%{built_tag_strip}
-
+%forgeautosetup
 
 %build
 %meson
 %meson_build
 
-
 %install
 %meson_install
-%find_lang %{flatpak_name}
-
+%find_lang %{app_id}
 
 %check
 %meson_test
 
-%files -f %{flatpak_name}.lang
+%files -f %{app_id}.lang
 %license LICENSE.md
 %doc README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md
 %{_bindir}/%{name}
-%{_datadir}/applications/%{flatpak_name}.desktop
-%{_datadir}/glib-2.0/schemas/%{flatpak_name}.gschema.xml
-%{_datadir}/icons/hicolor/*/apps/%{flatpak_name}.png
-%{_metainfodir}/%{flatpak_name}.metainfo.xml
-
-
+%{_datadir}/applications/%{app_id}.desktop
+%{_datadir}/glib-2.0/schemas/%{app_id}.gschema.xml
+%{_datadir}/icons/hicolor/*/apps/%{app_id}.png
+%{_metainfodir}/%{app_id}.metainfo.xml
 
 %changelog
 %autochangelog
