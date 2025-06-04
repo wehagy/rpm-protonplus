@@ -1,0 +1,64 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2023-2025 Wesley Gimenes <wehagy@proton.me>
+
+outdir?=$(TOPDIR)/output
+spec?=$(TOPDIR)
+
+DNF_CMD:= \
+	dnf install \
+		--assumeyes \
+		--nodocs \
+		--setopt=install_weak_deps=False
+
+ifeq ($(HOSTNAME),mock)
+  SRCRPMDIR:=$(outdir)
+else
+  SRCRPMDIR:=$(outdir)/srpm
+endif
+
+prepare-srpm:
+	$(DNF_CMD) \
+		fedpkg \
+		rpmautospec
+	spectool -g $(spec)/*.spec
+	sha256sum -c CHECKSUM
+
+prepare-rpm:
+	$(DNF_CMD) \
+		mock \
+		podman
+
+srpm: prepare-srpm
+	fedpkg \
+		--release rawhide \
+			srpm -- \
+				--define "_srcrpmdir $(SRCRPMDIR)"
+	#rpmbuild -bs \
+	#	--define "_builddir ${PWD}" \
+	#	--define "_buildrootdir ${PWD}/.build" \
+	#	--define "_rpmdir ${PWD}" \
+	#	--define "_srcrpmdir $(outdir)" \
+	#	--define "_specdir ${PWD}" \
+	#	--define "_sourcedir ${PWD}" \
+	#	$(spec)/*.spec
+
+rpm: prepare-rpm
+	mock \
+		--rebuild $(outdir)/srpm/*.src.rpm \
+		--resultdir "$(outdir)/rpm"
+	#mock \
+	#	--buildsrpm \
+	#	--sources "$(spec)" \
+	#	--spec $(spec)/*.spec \
+	#	--resultdir "$(outdir)/rpm" \
+	#dnf builddep -y \
+	#	$(spec)/*.spec
+	#rpmbuild -bb \
+	#	--define "_builddir ${PWD}" \
+	#	--define "_buildrootdir ${PWD}/.build" \
+	#	--define "_rpmdir ${PWD}" \
+	#	--define "_srcrpmdir $(outdir)" \
+	#	--define "_specdir ${PWD}" \
+	#	--define "_sourcedir ${PWD}" \
+	#	$(spec)/*.spec
+
