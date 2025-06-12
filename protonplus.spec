@@ -3,7 +3,7 @@
 # SPDX-Comment: See LICENSE for the full license text
 
 ##### Variable macros
-%global tag                 v0.4.32
+%global tag                 v0.5.2
 # BuildRequires dependencies
 %global meson_version       1.0.0
 %global libadwaita_version  1.5
@@ -30,8 +30,7 @@ URL:            https://protonplus.vysp3r.com
 Source0:        %{forgesource}
 # license of the spec file
 Source1:        LICENSE
-Source2:        README.md
-Source3:        %{name}.rpmlintrc
+Source2:        %{name}.rpmlintrc
 
 ##### Build dependencies
 BuildRequires:  gettext
