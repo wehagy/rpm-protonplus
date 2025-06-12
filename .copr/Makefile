@@ -33,9 +33,25 @@ srpm: prepare-srpm
 		--release rawhide \
 			srpm -- \
 				--define "_srcrpmdir $(SRCRPMDIR)"
+	#rpmbuild -bs \
+	#	--define "_builddir ${PWD}" \
+	#	--define "_buildrootdir ${PWD}/.build" \
+	#	--define "_rpmdir ${PWD}" \
+	#	--define "_srcrpmdir $(outdir)" \
+	#	--define "_specdir ${PWD}" \
+	#	--define "_sourcedir ${PWD}" \
+	#	$(spec)/*.spec
 
 rpm: prepare-rpm
 	mock \
 		--rebuild $(outdir)/srpm/*.src.rpm \
 		--resultdir "$(outdir)/rpm"
+	#rpmbuild -bb \
+	#	--define "_builddir ${PWD}" \
+	#	--define "_buildrootdir ${PWD}/.build" \
+	#	--define "_rpmdir ${PWD}" \
+	#	--define "_srcrpmdir $(outdir)" \
+	#	--define "_specdir ${PWD}" \
+	#	--define "_sourcedir ${PWD}" \
+	#	$(spec)/*.spec
 
