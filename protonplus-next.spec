@@ -22,6 +22,7 @@ Version:        %{fileref}
 Release:        %autorelease
 Summary:        A modern compatibility tools manager
 ExclusiveArch:  x86_64
+BuildSystem:    meson
 
 License:        GPL-3.0-or-later
 URL:            https://protonplus.vysp3r.com
@@ -90,19 +91,9 @@ Supported compatibility tools:
  - VKD3D-Lutris
  - VKD3D-Proton
 
-%prep
-%forgeautosetup
-
-%build
-%meson
-%meson_build
-
-%install
-%meson_install
+# use -a for append command and -p for prepend command
+%install -a
 %find_lang %{app_id}
-
-%check
-%meson_test
 
 %files -f %{app_id}.lang
 %license LICENSE.md
