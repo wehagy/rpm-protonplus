@@ -95,6 +95,10 @@ Supported compatibility tools:
  - Proton EM
  - Proton Tkg
  - Proton Sarek
+ - Kron4ek Wine-Builds Proton
+ - Kron4ek Wine-Builds Vanilla
+ - Kron4ek Wine-Builds Staging
+ - Kron4ek Wine-Builds Staging-Tkg
  - DXVK
  - DXVK (Sarek)
  - DXVK Async (Sarek)
