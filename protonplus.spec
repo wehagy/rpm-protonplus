@@ -3,7 +3,7 @@
 # SPDX-Comment: See LICENSE for the full license text
 
 ##### Variable macros
-%global tag                 v0.5.8
+%global tag                 v0.5.10
 # BuildRequires dependencies
 %global meson_version       1.0.0
 %global libadwaita_version  1.5
@@ -22,7 +22,7 @@
 Name:           protonplus
 Version:        %{fileref}
 Release:        %autorelease
-Summary:        A modern compatibility tools manager for Linux
+Summary:        A modern compatibility tools manager
 ExclusiveArch:  x86_64
 
 License:        GPL-3.0-or-later
@@ -71,14 +71,17 @@ Recommends:     yad >= %{yad_version}
 
 
 %description
-Install and manage Wine/Proton based compatibility tools
-with a graphical user interface.
+Features:
+ - Manage supported compatibility tools across supported launchers
+ - Change the compatibility tool and launch options of your Steam games
+ - And much more...
 
 Supported launchers:
  - Steam
  - Lutris
  - Heroic Games Launcher
  - Bottles
+ - WineZGUI
 
 Supported compatibility tools:
  - Steam Tinker Launch
@@ -87,8 +90,17 @@ Supported compatibility tools:
  - Boxtron
  - Roberta
  - NorthstarProton
+ - Proton-GE RTSP
+ - Proton CachyOS
+ - Proton EM
+ - Proton Tkg
+ - Proton Sarek
  - DXVK
- - And much more
+ - DXVK (Sarek)
+ - DXVK Async (Sarek)
+ - DXVK GPL+Async (Ph42oN)
+ - VKD3D-Lutris
+ - VKD3D-Proton
 
 %prep
 %forgeautosetup
