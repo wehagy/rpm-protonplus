@@ -3,7 +3,7 @@
 # SPDX-Comment: See LICENSE for the full license text
 
 ##### Variable macros
-%global tag                 v0.5.10
+%global tag                 v0.5.11
 # BuildRequires dependencies
 %global meson_version       1.0.0
 %global libadwaita_version  1.5
@@ -31,6 +31,7 @@ Source0:        %{forgesource}
 # license of the spec file
 Source1:        LICENSE
 Source2:        protonplus.rpmlintrc
+Patch0:         0001-Fix-launchers-loading-issue.patch
 
 ##### Build dependencies
 BuildRequires:  gettext
@@ -107,7 +108,7 @@ Supported compatibility tools:
  - VKD3D-Proton
 
 %prep
-%forgeautosetup
+%forgeautosetup -p1
 
 %build
 %meson
