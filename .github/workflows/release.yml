@@ -1,0 +1,44 @@
+# Release new version in Copr
+---
+name: Release new version in Copr
+on:
+  # Allows manual workflow run (must in default branch to work)
+  workflow_dispatch:
+  release:
+    types: [published]
+
+env:
+  DNF_CMD: >
+    dnf install 
+      --assumeyes 
+      --nodocs 
+      --setopt=install_weak_deps=False
+
+jobs:
+  release:
+    name: Build in Copr
+    runs-on: ubuntu-24.04
+    container: 
+      image: fedora:latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          ${DNF_CMD} \
+            copr-cli
+
+      - name: Install API token for copr
+        env:
+          API_TOKEN_CONTENT: ${{ secrets.COPR_API_TOKEN }}
+        run: |
+          mkdir -p "${HOME}/.config"
+          echo "${API_TOKEN_CONTENT}" > "${HOME}/.config/copr"
+
+      - name: Trigger build in Copr
+        run: |
+          copr build-package \
+            --name "$(echo *.spec | sed 's/\.spec//')" \
+            wehagy/protonplus
