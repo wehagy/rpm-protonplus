@@ -7,8 +7,6 @@
 # BuildRequires dependencies
 %global meson_version       1.0.0
 %global libadwaita_version  1.5
-# Recommends dependencies
-%global yad_version         7.2
 
 ##### Constant macros
 %global app_id              com.vysp3r.ProtonPlus
@@ -54,20 +52,6 @@ BuildRequires:  libappstream-glib
 ##### Runtime dependencies
 # fix: Directories without known owners: /usr/share/icons/hicolor/*
 Requires:       hicolor-icon-theme
-
-##### SteamTinkerLaunch dependencies
-Recommends:     bash
-Recommends:     gawk
-Recommends:     git
-Recommends:     procps-ng
-Recommends:     unzip
-Recommends:     wget
-Recommends:     xdotool
-Recommends:     xprop
-Recommends:     xrandr
-Recommends:     xwininfo
-Recommends:     xxd
-Recommends:     yad >= %{yad_version}
 
 
 %description
