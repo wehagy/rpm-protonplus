@@ -3,7 +3,7 @@
 # SPDX-Comment: See LICENSE for the full license text
 
 ##### Variable macros
-%global tag                 v0.5.12
+%global tag                 v0.5.13
 # BuildRequires dependencies
 %global meson_version       1.0.0
 %global libadwaita_version  1.5
