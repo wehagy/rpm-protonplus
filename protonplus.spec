@@ -6,7 +6,7 @@
 %global tag                 v0.5.13
 # BuildRequires dependencies
 %global meson_version       1.0.0
-%global libadwaita_version  1.5
+%global libadwaita_version  1.6
 
 ##### Constant macros
 %global app_id              com.vysp3r.ProtonPlus
