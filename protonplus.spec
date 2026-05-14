@@ -28,7 +28,6 @@ Source1:        LICENSE
 Source2:        %{name}.rpmlintrc
 
 ##### Build dependencies
-BuildRequires:  gettext
 BuildRequires:  meson >= %{meson_version}
 BuildRequires:  vala
 
@@ -45,10 +44,6 @@ BuildRequires:  pkgconfig(libsoup-3.0)
 BuildRequires:  desktop-file-utils
 # appstream-util command
 BuildRequires:  libappstream-glib
-
-##### Runtime dependencies
-# fix: Directories without known owners: /usr/share/icons/hicolor/*
-Requires:       hicolor-icon-theme
 
 
 %description
