@@ -47,7 +47,7 @@ else
 endif
 
 prepare-srpm:
-	$(DNF_CMD) fedpkg rpmautospec
+	$(DNF_CMD) fedpkg rpmautospec meson
 	spectool -g $(SPEC_FILE)
 	sha256sum -c $(HASH_FILE)
 

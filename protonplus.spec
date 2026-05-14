@@ -46,23 +46,14 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
 
 
+BuildSystem: meson
+
 %description
 ProtonPlus allows you to easily manage and update various compatibility tools
 like Proton, Wine, DXVK, and VKD3D across different launchers.
 
-%prep
-%forgeautosetup
-
-%build
-%meson
-%meson_build
-
-%install
-%meson_install
+%install -a
 %find_lang %{app_id}
-
-%check
-%meson_test
 
 %files -f %{app_id}.lang
 %license LICENSE.md
