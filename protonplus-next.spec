@@ -3,7 +3,7 @@
 # SPDX-Comment: See LICENSE for the full license text
 
 ##### Variable macros
-%global tag                 v0.5.21
+%global tag                 v0.6.4
 # BuildRequires dependencies
 %global meson_version       1.0.0
 %global libadwaita_version  1.6
@@ -20,8 +20,8 @@
 Name:           protonplus-next
 Version:        %{fileref}
 Release:        %autorelease
-Summary:        A modern compatibility tools manager
-ExclusiveArch:  x86_64
+Summary:        Manage Proton, Wine, DXVK, and VKD3D tools for Linux game launchers
+ExclusiveArch:  x86_64 aarch64
 
 License:        GPL-3.0-or-later
 URL:            https://protonplus.vysp3r.com
@@ -35,19 +35,24 @@ BuildRequires:  gettext
 BuildRequires:  meson >= %{meson_version}
 BuildRequires:  vala
 
+BuildRequires:  pkgconfig(appstream)
+BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(gee-0.8)
+BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libadwaita-1) >= %{libadwaita_version}
 BuildRequires:  pkgconfig(libarchive)
+BuildRequires:  pkgconfig(libnotify)
 BuildRequires:  pkgconfig(libsoup-3.0)
+BuildRequires:  pkgconfig(sdl3)
 
 ##### Check dependencies
 # desktop-file-validate command
 BuildRequires:  desktop-file-utils
 # appstream-util command
-BuildRequires:  libappstream-glib
+#BuildRequires:  libappstream-glib
 
 ##### Runtime dependencies
 # fix: Directories without known owners: /usr/share/icons/hicolor/*
@@ -55,8 +60,10 @@ Requires:       hicolor-icon-theme
 
 
 %description
-ProtonPlus allows you to easily manage and update various compatibility tools
-like Proton, Wine, DXVK, and VKD3D across different launchers.
+ProtonPlus helps you install, update, remove, and organize compatibility tools
+used by Steam and other Linux game launchers. It discovers supported
+launcher installations, downloads releases from their upstream sources,
+and installs them into the layouts expected by each launcher.
 
 %prep
 %forgeautosetup
